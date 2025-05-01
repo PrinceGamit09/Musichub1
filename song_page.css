@@ -1,0 +1,93 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: rgb(55, 51, 50);
+}
+
+.navbar {
+    background-color: black;
+    position: relative;  /* Make navbar sticky */
+    top: 0;  /* Sticky from top of the page */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    
+    color: whitesmoke;
+    overflow: hidden;  /* Prevent overflow if video is larger than navbar */
+    z-index: 1; /* Ensure navbar is above the background video */
+}
+
+#myvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the video covers the entire navbar */
+    height: 100%; /* Makes sure it stretches across the entire navbar height */
+    object-fit: cover; /* Ensures the video covers the entire background */
+    opacity: 0.5; /* Makes the video semi-transparent */
+    z-index: -1;  /* Keeps the video behind all other content */
+     
+}
+.navbar img{
+    margin-top:30px;
+    margin-left:20px;
+    height:240px;
+    border-radius: 20px;
+}
+.navbar .text{
+    margin-top:65px;
+    margin-left: 30px;
+    color:whitesmoke;
+}
+.navbar #text1{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.navbar #text2{
+    font-size: 100px;
+    font-weight: bolder;
+    margin-top: 10px;
+    font-family: arial;
+}
+
+.container{
+    display :flex;
+    margin-top:20px;
+    margin-left: 20px;
+}
+.lyrics .text{
+    color:antiquewhite;
+    
+}
+.text pre{
+    font-size:15px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.artist{
+    margin-left: 500px;
+    margin-top: 50px;
+}
+
+
+
+#art1,#art2,#art3{
+    color:antiquewhite;
+    display:flex;
+    margin-bottom: 15px;
+   
+    
+}
+.artist img{
+    border-radius: 50%;
+    height:80px;
+    width:80px;
+    margin-right: 10px;
+}
+.art_name{
+    margin-top: 23px;
+    margin-left: 10px;
+    font-size: 20px;
+}

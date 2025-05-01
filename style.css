@@ -1,0 +1,370 @@
+/* General reset and basic styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width:100%;
+  top: 0;
+  box-sizing: border-box;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+#logo {
+  height: 70px;
+}
+
+#home {
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.navbar input {
+  width: 300px;
+  background-color: white;
+  margin-left: 10px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+  margin-right: 200px;
+}
+
+.navbar a {
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 20px;
+  color: white;
+  position: relative;
+}
+
+
+.navbar .link::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: orangered;
+  
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.navbar .link:hover::after {
+  width: 100%;
+  color: blue;
+  left: 0;
+  
+}
+
+.navbar button {
+  color: black;
+  background-color: white;
+  border-radius: 30px;
+  text-align: center;
+  width: 80px;
+  height: 40px;
+  font-weight: bolder;
+}
+.navbar button:hover{
+  transform: scale(1.2);
+ background-color: #ff6600;
+}
+
+/* Main Library Section */
+.lib {
+   background-color: #252424; 
+ padding-top:70px;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* min-height: 800px; */
+  max-width: 100%;
+  margin-top: 7px;
+  /* margin-left: 7px; */
+  margin-right: 7px;
+  border-radius: 20px;
+  /* padding: 20px; */
+  box-sizing: border-box;
+}
+
+/* Title Styling */
+.lib .title {
+  margin-top: 10px;
+  font-size: 15px;
+  margin-left: 20px;
+  font-family: Playwrite AU SA;
+ color:antiquewhite;
+}
+
+/* Singer Section Styling */
+.lib .singer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+#ari{
+  
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.singer_prof{
+  font-size: 15px;
+  color:gray;
+}
+.singer img {
+  width: 160px;
+  height: 170px;
+  border-radius: 50%;
+   /* margin-left: 10px;  */
+  /* margin-right:10px; */
+}
+#ari:hover {
+  background-color: rgba(14, 14, 14, 0.3);
+  transform: scale(1.05);
+  border-radius: 10px;
+}
+#ari p {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-right: 35px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom:5px;
+}
+#ari p:hover{
+  color:orangered;
+
+}
+.singer a {
+  text-decoration: none;
+}
+
+.singer img:hover {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.8);
+}
+
+/* Song Section Styling */
+.songs_info {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.songs_info img {
+  height: 170px;
+  border-radius: 15px;
+  
+}
+
+.songs_info a {
+  text-decoration: none;
+  color: white;
+}
+
+.song_name {
+  font-size: 25px;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-weight: bolder;
+  font-family: Caveat;
+  max-width: 150px;
+  
+}
+
+.song_artist {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(145, 148, 151);
+}
+
+.songs_info img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(58, 173, 226, 0.901);
+}
+
+.song_name:hover {
+  color: #ff6600;
+  transform: scale(1.1);
+}
+.song1{
+  position: relative;
+  margin-right: 10px;
+  padding:10px;
+  padding-bottom: 25px;
+  padding-top: 0px;
+}
+.song1:hover{
+
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    border-radius: 10px;
+    
+}
+.song1 .play-button {
+  position: absolute;
+   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display:none;
+  color: white;
+  font-size: 35px; /* Adjust the size of the button */
+  color:#ff6600;
+}
+
+.song1:hover .play-button {
+  display: block; /* Show the play button when hovering */
+}
+/* Footer (Bottom Bar) Styling */
+.footer {
+  background-color: #000000;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 15px;
+  min-width: 250px;
+}
+
+.footer h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff6600;
+  font-family:  cursive;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #ff6600;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  margin-left: 430px;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-link {
+  color: #ff6600;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 15px;
+
+}
+
+.social-link {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #ff6600;
+}
+
+.social-links i {
+  transition: color 0.3s ease;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+/* Ensure footer is at the bottom of the page */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+footer {
+  margin-top: auto;
+}
